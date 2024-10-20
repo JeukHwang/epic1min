@@ -69,7 +69,9 @@ export function BugReport() {
             Report a bug / Suggest a feature
           </h2>
           <p className="text-sm leading-none text-gray-500 dark:text-gray-400">
-            Please fill in the blank below
+            Please fill in the blank below or send an email to{" "}
+            <code>{"jeukhwang.dev"}</code>
+            <code>{"(at)gmail(dot)com"}</code>
           </p>
         </div>
         <div className="grid gap-6">
