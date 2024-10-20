@@ -3,8 +3,9 @@
 import VideoList from "@/components/video-list";
 import { DirectionTypes, SortByTypes, VideoTypes } from "@/lib/type";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
-export default function About() {
+function AboutInner() {
   const params = useSearchParams();
   const type = (params.get("type") || "min") as VideoTypes;
   const sortBy = (params.get("sortBy") || "impact") as SortByTypes;
@@ -17,5 +18,13 @@ export default function About() {
       direction={direction}
       query={query}
     />
+  );
+}
+
+export default function About() {
+  return (
+    <Suspense>
+      <AboutInner />
+    </Suspense>
   );
 }
