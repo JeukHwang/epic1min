@@ -57,6 +57,7 @@ const VideoList = (props: Props) => {
         if (newItems.length === 0) {
           setHasMore(false);
         } else {
+          setHasMore(newItems.length === 12);
           setItems((prevItems) => [...prevItems, ...newItems]);
         }
       } catch (error) {
@@ -145,8 +146,14 @@ const VideoList = (props: Props) => {
             }
             endMessage={
               <p className="text-sm font-medium text-center line-clamp-2 m-8">
-                Want more? Find them on YouTube and{" "}
-                <Link href="/register">register new videos!</Link>
+                <p>You have reached the end!</p>
+                <p>
+                  Find more on YouTube and{" "}
+                  <Link href="/register" target="_blank" className="underline">
+                    register new videos
+                  </Link>
+                  !
+                </p>
               </p>
             }
             scrollableTarget="scrollableDiv"
