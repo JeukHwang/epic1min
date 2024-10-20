@@ -68,7 +68,7 @@ const VideoList = (props: Props) => {
   );
   const updateItems = useCallback(() => {
     fetchItems(page).then(() => setPage((prevPage) => prevPage + 1));
-  }, [fetchItems, type, sortBy, direction, query, page]);
+  }, [fetchItems, page]);
 
   useEffect(() => {
     //     // Sync text with query
@@ -78,7 +78,7 @@ const VideoList = (props: Props) => {
     setPage(0);
     setHasMore(true);
     setItems([]);
-  }, [type, sortBy, direction, query]);
+  }, [type, sortBy, direction, query, updateURL]);
 
   useEffect(() => {
     if (page === 0) updateItems();
