@@ -19,7 +19,13 @@ import {
   videoTypeInfo,
   VideoTypes,
 } from "@/lib/type";
-import { BugIcon, ListPlusIcon, LucideIcon, SettingsIcon } from "lucide-react";
+import {
+  BugIcon,
+  InfoIcon,
+  ListPlusIcon,
+  LucideIcon,
+  SettingsIcon,
+} from "lucide-react";
 import Link from "next/link";
 
 interface Props {
@@ -107,12 +113,22 @@ export default function VideoDropdownMenu({
         <DropdownMenuGroup>
           <DropdownMenuLabel>Settings</DropdownMenuLabel>
           <DropdownMenuItem>
+            <InfoIcon className="mr-2 h-4 w-4" />
+            <Link href="/about" target="_blank">
+              About
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
             <ListPlusIcon className="mr-2 h-4 w-4" />
-            <Link href="/register">Register new video</Link>
+            <Link href="/register" target="_blank">
+              Register new video
+            </Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
             <BugIcon className="mr-2 h-4 w-4" />
-            <Link href="/report">Report bug/feature</Link>
+            <Link href="/report" target="_blank">
+              Report bug/feature
+            </Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>
