@@ -25,8 +25,8 @@ export default function About() {
             <br />• <b>≥60 minutes:</b> Provide in-depth knowledge and value.
           </p>
           <p className="text-sm leading-5 text-gray-500 dark:text-gray-400">
-            Obviously, it's not an easy condition to get views, whether it's
-            under 1m or over 1h.
+            Obviously, it&apos;s not an easy condition to get views, whether
+            it&apos;s under 1m or over 1h.
           </p>
           <h2 className="text-base font-medium">Why do I make Epic1min</h2>
           <p className="text-sm leading-none text-gray-500 dark:text-gray-400">
@@ -46,7 +46,7 @@ export default function About() {
               target={"_blank"}
               className="underline"
             >
-              TED's old tagline
+              TED&apos;s old tagline
             </Link>
             .
             <br />
